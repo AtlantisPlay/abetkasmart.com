@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Privacy Policy for Abetka Smart - Safe educational mobile games for children ages 2-5. No ads, no data collection."
+    />
+    <title>Privacy Policy — Abetka Smart</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="logo" href="index.html" aria-label="Abetka Smart – home">Abetka <span>Smart</span></a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="primary-menu" class="nav-links">
+          <li><a href="index.html#games-overview">Games</a></li>
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#about-us">About</a></li>
+          <li><a class="btn btn--small" href="mailto:support@abetkasmart.com">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="legal-page">
+        <div class="container">
+          <div class="legal-content">
+            <!-- Language Toggle -->
+            <div class="lang-toggle">
+              <a href="#english" class="lang-btn active">English</a>
+              <a href="#ukrainian" class="lang-btn">Українська</a>
+            </div>
+
+            <!-- English Version -->
+            <article id="english" class="legal-section">
+              <h1>Privacy Policy — Abetka Smart</h1>
+              <p class="legal-updated"><strong>Updated: November 28, 2025</strong></p>
+
+              <p>Abetka Smart creates safe and educational mobile games for children ages 2–5.</p>
+              <p>We do not show ads.</p>
+              <p>We do not collect, store, or share any personal data.</p>
+
+              <h2>What we do</h2>
+              <p>We provide child-friendly educational games.</p>
+              <p>We keep the settings you choose (language, sound, music) on your device only.</p>
+              <p>We protect all settings and external links with a simple 3-second Parent Gate.</p>
+
+              <h2>Settings Zone</h2>
+              <p>All settings and external links require holding the Settings button for 3 seconds.</p>
+              <p>This Parent Gate ensures that only an adult can access them.</p>
+              <p>Privacy Policy and Terms of Use open in your system browser.</p>
+              <p>Support email opens your default mail app.</p>
+              <p>All external actions use system applications only.</p>
+
+              <h2>Contact us</h2>
+              <p>
+                <a href="mailto:support@abetkasmart.com">support@abetkasmart.com</a><br />
+                <a href="https://abetkasmart.com">https://abetkasmart.com</a>
+              </p>
+            </article>
+
+            <!-- Ukrainian Version -->
+            <article id="ukrainian" class="legal-section">
+              <h1>Політика конфіденційності — Abetka Smart</h1>
+              <p class="legal-updated"><strong>Оновлено: 28 листопада 2025</strong></p>
+
+              <p>Abetka Smart створює безпечні, корисні та якісні мобільні ігри для дітей 2–5 років.</p>
+              <p>У наших додатках немає реклами.</p>
+              <p>Ми не збираємо, не зберігаємо та не передаємо жодних персональних даних.</p>
+
+              <h2>Що ми робимо</h2>
+              <p>Ми створюємо дитячі навчальні ігри.</p>
+              <p>Ми зберігаємо ваші вибрані налаштування (мова інтерфейсу, звук, музика) лише на вашому пристрої.</p>
+              <p>Ми захищаємо налаштування та зовнішні посилання простим батьківським доступом — утриманням кнопки 3 секунди.</p>
+
+              <h2>Екран налаштувань</h2>
+              <p>Усі налаштування та зовнішні посилання відкриваються лише після утримання кнопки "Налаштування" протягом 3 секунд — це гарантує, що доступ отримує лише дорослий.</p>
+              <p>Privacy Policy та Terms of Use відкриваються у системному браузері.</p>
+              <p>Лист на email підтримки відкривається у вашому поштовому клієнті.</p>
+              <p>Усі зовнішні дії виконуються тільки через системні додатки пристрою.</p>
+
+              <h2>Зворотний зв'язок</h2>
+              <p>
+                <a href="mailto:support@abetkasmart.com">support@abetkasmart.com</a><br />
+                <a href="https://abetkasmart.com">https://abetkasmart.com</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>
+          &copy; 2025 Abetka Smart. All rights reserved.
+          <span class="dot">•</span>
+          <a href="mailto:support@abetkasmart.com">support@abetkasmart.com</a>
+        </p>
+        <p class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span class="dot">•</span>
+          <a href="terms.html">Terms of Use</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script>
+      // Language toggle functionality
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const target = this.getAttribute('href').substring(1);
+          document.querySelectorAll('.legal-section').forEach(section => {
+            section.style.display = section.id === target ? 'block' : 'none';
+          });
+        });
+      });
+      // Initialize - show English by default
+      document.getElementById('ukrainian').style.display = 'none';
+    </script>
+  </body>
+</html>
