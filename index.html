@@ -1,203 +1,432 @@
-<!DOCTYPE html>
-<html lang="uk">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abetka Smart | First Learning Activities for Little Hands</title>
     <meta
       name="description"
-      content="Abetka Smart створює розвивальні ігри для дітей 2–5 років. Ігри допомагають пізнавати світ, вчитися через гру та розвивати корисні навички."
+      content="Beautiful first learning activities for children ages 2-5. Matching, sorting, finding, tracing, counting, independent play, music, and gentle stories."
     />
-    <meta
-      name="keywords"
-      content="ігри для дітей, розвивальні ігри, українська абетка, навчальні ігри для малюків"
-    />
-    <title>Abetka Smart — Ігри, що розважають і навчають</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="nav container" aria-label="Головна навігація">
-        <a class="logo" href="#hero" aria-label="Abetka Smart – на головну">Abetka <span>Smart</span></a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Меню">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul id="primary-menu" class="nav-links">
-          <li><a href="#games-overview">Ігри</a></li>
-          <li><a href="#mission">Місія</a></li>
-          <li><a href="#about-us">Про нас</a></li>
-          <li><a class="btn btn--small" href="mailto:info@abetkasmart.com">Зв’язатися</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <main>
-      <!-- HERO -->
-      <section id="hero" class="hero">
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <h1>Ігри, що розважають і навчають дітей 2–5 років</h1>
-            <p>
-              Abetka Smart створює добрі, безпечні та корисні ігри для найменших.
-              Навчання через гру — найкращий спосіб пізнавати світ з цікавістю.
+      <section class="hero" aria-labelledby="hero-title">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="#top" aria-label="Abetka Smart home">
+            <span class="brand-mark">A</span>
+            <span class="brand-name">Abetka Smart</span>
+          </a>
+          <div class="nav-links">
+            <a href="#games">Games</a>
+            <a href="#music">Music</a>
+            <a href="#approach">Approach</a>
+            <a href="#trust">For Parents</a>
+          </div>
+        </nav>
+
+        <div class="hero-content" id="top">
+          <div class="hero-copy">
+            <p class="hero-kicker">For little hands and early confidence</p>
+            <h1 id="hero-title">
+              <span>Beautiful first activities</span>
+              <span>for little hands.</span>
+            </h1>
+            <p class="hero-text">
+              Small stories. Beautiful worlds. Meaningful play. Gentle learning for children ages 2-5.
             </p>
-            <div class="hero__actions">
-              <a class="btn" href="#games-overview">Переглянути ігри</a>
+            <p class="hero-support">
+              Matching, sorting, finding, tracing, counting, and creative play. No reading needed; visual context guides
+              play in any language.
+            </p>
+            <div class="story-marks" aria-hidden="true">
+              <span>♡</span>
+              <span>✦</span>
+              <span>♪</span>
+              <span>★</span>
             </div>
-            <ul class="hero__badges" aria-label="Переваги">
-              <li>Без реклами</li>
-              <li>Українською</li>
-              <li>Схвалено педагогами</li>
+            <a class="hero-action" href="#games">Explore our games</a>
+          </div>
+          <figure class="hero-window" aria-label="A glimpse into our game worlds">
+            <div class="hero-video-frame">
+              <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="Assets/Images/Princess/princess%20Birthday.png"
+              >
+                <source src="Assets/Video/Promo%20Princess%20no%20titles%20for%20site%20V3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption class="hero-window-note">
+              <span>Independent play</span>
+              <span>Songs with heart</span>
+              <span>Story gives meaning</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="games-section" id="games" aria-labelledby="games-title">
+        <div class="section-heading games-heading">
+          <p class="eyebrow">Our games</p>
+          <h2 id="games-title">Little worlds, ready to play.</h2>
+          <div class="little-divider" aria-hidden="true">✦</div>
+        </div>
+
+        <div class="carousel-shell" id="worlds">
+          <button class="carousel-button carousel-button-prev" type="button" aria-label="Previous game">‹</button>
+          <div class="game-carousel" aria-label="Game worlds carousel">
+            <article class="game-card is-active" data-game="princess" aria-current="true">
+              <img src="Assets/Images/Princess/princess%20Birthday.png" alt="" />
+              <div class="game-card-body">
+                <strong>Princess Birthday</strong>
+                <span>A birthday story with cupcakes, friends, gifts, and Lily's little unicorn.</span>
+                <div class="game-card-actions">
+                  <a href="https://apps.apple.com/il/app/princess-birthday-games-3-5/id6765734577" target="_blank" rel="noopener noreferrer">App Store</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.abetkasmart.princessgames&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer">Google Play</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="game-card" data-game="christmas">
+              <img src="Assets/Images/Christmass/Christmas%20Puzzle%20Games%20(Ages%203%E2%80%935).png" alt="" />
+              <div class="game-card-body">
+                <strong>Christmas Games</strong>
+                <span>A cozy holiday world with Santa, a baby reindeer, stockings, trees, and gentle puzzles.</span>
+                <div class="game-card-actions">
+                  <a href="https://apps.apple.com/il/app/christmas-games-for-kids-3-5/id6756796485" target="_blank" rel="noopener noreferrer">App Store</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.abetkasmart.christmasgames" target="_blank" rel="noopener noreferrer">Google Play</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="game-card" data-game="friends">
+              <img src="Assets/Images/Friends/sc17_shot01_keyframe.png" alt="" />
+              <div class="game-card-body">
+                <strong>Little Friends</strong>
+                <span>Two snowy villages share letters, gifts, ice cream, cookies, and friendship.</span>
+                <div class="game-card-actions">
+                  <span class="card-coming-soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="game-card" data-game="ocean">
+              <img src="Assets/Images/Ocean/SC012%20Test.png" alt="" />
+              <div class="game-card-body">
+                <strong>Ocean Animals</strong>
+                <span>A magical reef world where children observe sea creatures in their own home.</span>
+                <div class="game-card-actions">
+                  <span class="card-coming-soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="game-card" data-game="monsters">
+              <img src="Assets/Images/Monster%20Numbers/12345.png" alt="" />
+              <div class="game-card-body">
+                <strong>Monster Numbers</strong>
+                <span>A musical number world with funny monsters, counting songs, and early math play.</span>
+                <div class="game-card-actions">
+                  <span class="card-coming-soon">Coming soon</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-button carousel-button-next" type="button" aria-label="Next game">›</button>
+        </div>
+
+      </section>
+
+      <section class="feeling-section" aria-labelledby="feeling-title">
+        <div class="feeling-copy">
+          <h2 id="feeling-title">Why our games feel different</h2>
+          <div class="little-divider" aria-hidden="true">♡</div>
+          <p class="feeling-lead">
+            Learning begins inside the story.
+          </p>
+          <p>
+            Children match, sort, count, trace, find, and create as part of something meaningful: preparing a birthday,
+            sending a letter, decorating a treat, or helping a friend.
+          </p>
+          <p>
+            No reading or voiceover is needed. The scene, characters, and visual context guide the child.
+          </p>
+        </div>
+        <figure class="feeling-image">
+          <img src="Assets/Images/Friends/sc08_shot01_keyframe.png" alt="" />
+        </figure>
+        <div class="feeling-method">
+          <div class="feeling-inline-divider" aria-hidden="true">✦</div>
+          <div class="feeling-method-card">
+            <p>Designed around early-childhood learning principles:</p>
+            <ul class="principles-list">
+              <li>Guided play</li>
+              <li>Montessori-inspired independence</li>
+              <li>Visual logic and sorting</li>
+              <li>Early math</li>
+              <li>Attention and memory</li>
+              <li>Planning and self-control</li>
             </ul>
           </div>
-          <div class="hero__image">
-            <img
-              src="images/hero.jpg"
-              alt="Родина разом користується планшетом"
-              loading="eager"
-              width="800"
-              height="533"
-            />
-          </div>
-        </div>
-        <div class="shape shape--one" aria-hidden="true"></div>
-        <div class="shape shape--two" aria-hidden="true"></div>
-      </section>
-
-      <!-- MISSION / FEATURES -->
-      <section id="mission" class="section section--alt">
-        <div class="container">
-          <h2 class="section__title">Наша місія</h2>
-          <p class="section__lead">
-            Ми поєднуємо перевірені методики з сучасними підходами, щоб ігри були
-            одночасно веселими, безпечними та ефективними для розвитку.
+          <p class="feeling-closing">
+            <span>No scores. No pressure. No reward loops.</span>
+            <span>Motivation comes from the story itself.</span>
           </p>
-          <div class="features">
-            <article class="feature">
-              <div class="feature__icon" aria-hidden="true">🧩</div>
-              <h3>Перевірені методики</h3>
-              <p>
-                Використовуємо підходи Монтессорі та ігрові практики для розвитку
-                уваги, мовлення та дрібної моторики.
+        </div>
+      </section>
+
+      <article class="game-detail" aria-live="polite">
+        <img
+          class="game-detail-image"
+          src="Assets/Images/Princess/sc03_shot02_keyframe.png"
+          alt="Princess Lily and her birthday world"
+        />
+        <div class="game-detail-copy">
+          <p class="eyebrow game-detail-status">Live in stores</p>
+          <h2 class="game-detail-title">Princess Birthday Games</h2>
+          <p class="game-detail-text">
+            Help Princess Lily and her rainbow unicorn prepare for a special birthday through animated story chapters
+            and independent learning games for ages 3-5.
+          </p>
+          <p class="game-detail-learning">
+            No reading or voiceover is needed. The game guides children through visual context, original music, and
+            beautiful songs. No scores, no pressure, and no stressful reward loops.
+          </p>
+          <p class="game-detail-list-title">What your child will do</p>
+          <ul class="game-detail-actions">
+            <li>Count candles, gifts, and balloons from 1 to 5</li>
+            <li>Trace rainbows, numbers, and shapes with a fingertip</li>
+            <li>Match colors, shapes, gifts, and sweet treats</li>
+            <li>Sort, compare, and solve simple puzzles</li>
+            <li>Decorate cupcakes, cakes, and party dresses</li>
+            <li>Follow Lily's story across 9 animated chapters</li>
+          </ul>
+          <div class="store-links game-detail-links">
+            <a href="https://apps.apple.com/il/app/princess-birthday-games-3-5/id6765734577" target="_blank" rel="noopener noreferrer">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.abetkasmart.princessgames&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer">Google Play</a>
+          </div>
+        </div>
+      </article>
+
+      <section class="learning-section" id="learning" aria-labelledby="learning-title">
+        <div class="section-heading learning-heading">
+          <p class="eyebrow">How learning works</p>
+          <h2 id="learning-title">First skills, gently practiced.</h2>
+          <div class="little-divider" aria-hidden="true">✦</div>
+          <p>
+            Short, visual activities help little hands practice matching, sorting, finding, tracing, counting, and
+            creating.
+          </p>
+          <p>
+            Each activity is small enough for young children, clear enough for independent play, and connected to the
+            story so the child understands why it matters.
+          </p>
+        </div>
+
+        <div class="learning-examples" aria-label="Examples of learning activities">
+          <article class="learning-tile">
+            <img src="Assets/Images/Mechanics/Count%20Candles.png" alt="" />
+            <div>
+              <strong>Count</strong>
+              <span>Count candles for a birthday cake.</span>
+            </div>
+          </article>
+
+          <article class="learning-tile">
+            <img src="Assets/Images/Mechanics/Trace%20Rainbow.png" alt="" />
+            <div>
+              <strong>Trace</strong>
+              <span>Trace a rainbow path that helps the story move forward.</span>
+            </div>
+          </article>
+
+          <article class="learning-tile">
+            <img src="Assets/Images/Mechanics/Match.png" alt="" />
+            <div>
+              <strong>Match</strong>
+              <span>Match cups, gifts, shapes, and story objects.</span>
+            </div>
+          </article>
+
+          <article class="learning-tile">
+            <img src="Assets/Images/Mechanics/Pinguin%20Slide%20Trace.png" alt="" />
+            <div>
+              <strong>Follow</strong>
+              <span>Guide a little friend along a path.</span>
+            </div>
+          </article>
+
+          <article class="learning-tile">
+            <img src="Assets/Images/Mechanics/Sort.png" alt="" />
+            <div>
+              <strong>Sort</strong>
+              <span>Sort berries, treats, stockings, colors, and early categories.</span>
+            </div>
+          </article>
+
+          <article class="learning-tile">
+            <img src="Assets/Images/Mechanics/Decorate.png" alt="" />
+            <div>
+              <strong>Decorate</strong>
+              <span>Decorate cakes, trees, letters, gifts, and story moments.</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="learning-close">
+          Little hands practice. Little minds connect. The story gives each activity meaning.
+        </p>
+      </section>
+
+      <section class="music-section" id="music" aria-labelledby="music-title">
+        <div class="section-heading music-heading">
+          <p class="eyebrow">Songs from our worlds</p>
+          <h2 id="music-title">Every story has a song.</h2>
+          <div class="little-divider" aria-hidden="true">♪</div>
+          <p>
+            Each game has its own original songs and professionally produced music. The music carries the story, gives
+            each world its feeling, and helps children remember the moments they loved.
+          </p>
+        </div>
+
+        <div class="music-grid">
+          <article class="music-card">
+            <img class="song-thumb" src="Assets/Icons/Icon%20Princess%20Birthday.png" alt="Princess birthday celebration scene" />
+            <div>
+              <p class="song-line">
+                Happy birthday, little princess!<br />
+                Sparkles lead the way.<br />
+                Magic comes to stay.
               </p>
-            </article>
-            <article class="feature">
-              <div class="feature__icon" aria-hidden="true">🎨</div>
-              <h3>Дизайн для малюків</h3>
-              <p>
-                Великі елементи інтерфейсу, контрастні кольори, озвучка та
-                інтуїтивні жести.
+            </div>
+          </article>
+
+          <article class="music-card">
+            <img class="song-thumb" src="Assets/Images/Friends/sc17_shot01_keyframe.png" alt="Little friends in a snowy village" />
+            <div>
+              <p class="song-line">
+                Little hugs across the snow.<br />
+                Love will find the way to go.<br />
+                Tiny friends in big wide air,<br />
+                sending giggles, sending care.
               </p>
-            </article>
-            <article class="feature">
-              <div class="feature__icon" aria-hidden="true">🛡️</div>
-              <h3>Безпека і спокій</h3>
-              <p>
-                Жодної сторонньої реклами, турбота про приватність та безпечний
-                дитячий контент.
+            </div>
+          </article>
+
+          <article class="music-card">
+            <img class="song-thumb" src="Assets/Icons/IconAppStore%20Christmass.png" alt="Christmas song scene" />
+            <div>
+              <p class="song-line">
+                Tiny bells and winter light.<br />
+                Little stars are shining bright.<br />
+                Warmest wishes, soft and slow.<br />
+                Christmas magic starts to glow.
               </p>
-            </article>
+            </div>
+          </article>
+
+          <article class="music-card">
+            <img class="song-thumb" src="Assets/Images/Ocean/SC05%20Test.png" alt="Ocean reef scene" />
+            <div>
+              <p class="song-line">
+                Look at this world!<br />
+                Look at the ocean!<br />
+                It's like a dream,<br />
+                magical motions.
+              </p>
+            </div>
+          </article>
+
+          <article class="music-card">
+            <img class="song-thumb" src="Assets/Images/Monster%20Numbers/12345.png" alt="Number monster characters" />
+            <div>
+              <p class="song-line">
+                One little monster wakes up slow.<br />
+                Two bright eyes begin to glow.<br />
+                Three deep breaths: in... out... smile.<br />
+                Four small steps, then dance a while.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <div class="section-heading">
+          <p class="eyebrow">Our approach</p>
+          <h2 id="approach-title">A gentle rhythm for little players.</h2>
+          <div class="little-divider" aria-hidden="true">♡</div>
+        </div>
+
+        <div class="approach-story">
+          <div class="approach-image">
+            <img src="Assets/Images/Friends/sc12_shot03_keyframe.png" alt="" />
+          </div>
+          <div class="approach-copy">
+            <p>
+              Each game moves in a gentle rhythm: a short story moment, a simple activity, then the next story moment.
+            </p>
+            <p>
+              Children do not move through random tasks. Each activity continues one emotional journey, giving young
+              players time to understand, play, watch, and return to the story.
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- GAMES -->
-      <section id="games-overview" class="section">
-        <div class="container">
-          <h2 class="section__title">Наші ігри</h2>
-          <div class="cards">
-            <article class="card">
-              <div class="card__media">
-                <img
-                  src="https://images.unsplash.com/photo-1535572290543-960a8046f5af?auto=format&fit=crop&q=80&w=1600"
-                  alt="Кольорові літери абетки для навчання"
-                  loading="lazy"
-                  width="640"
-                  height="480"
-                />
-              </div>
-              <div class="card__body">
-                <h3>Абетка</h3>
-                <p>
-                  Весела освітня гра для практики літер української абетки через
-                  інтерактивні завдання, озвучку та міні‑ігротеки.
-                </p>
-                <a class="btn btn--small btn--ghost" href="#" aria-disabled="true">Скоро</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__media">
-                <img
-                  src="images/puzzle.jpg"
-                  alt="логіка та увага"
-                  loading="lazy"
-                  width="800"
-                  height="533"
-                />
-              </div>
-              <div class="card__body">
-                <h3>Логіка</h3>
-                <p>
-                  Розвиває увагу, пам’ять і логіку за допомогою простих і
-                  захопливих завдань із кольорами, формами та знайомими предметами.
-                </p>
-                <a class="btn btn--small btn--ghost" href="#" aria-disabled="true">Скоро</a>
-              </div>
-            </article>
-          </div>
+      <section class="trust" id="trust" aria-label="Parent trust">
+        <div>
+          <p class="eyebrow">Made for families</p>
+          <h2>Safe for little players.</h2>
+          <div class="little-divider" aria-hidden="true">★</div>
         </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about-us" class="section section--alt">
-        <div class="container about">
-          <div class="about__media">
-            <img
-              src="images/team.jpg"
-              alt="Батьки та дитина разом навчаються з планшетом"
-              loading="lazy"
-              width="800"
-              height="533"
-            />
-          </div>
-          <div class="about__content">
-            <h2>Хто ми?</h2>
-            <p>
-              Abetka Smart — українська команда, що створює ігри для дітей 2–5
-              років. Ми віримо, що навчання має бути природним і радісним.
-            </p>
-            <p>
-              Поєднуємо перевірені педагогічні методики з найкращими практиками
-              гейміфікації та дитячої психології, щоб дітям було цікаво, а
-              батькам — спокійно.
-            </p>
-            <a class="btn" href="mailto:info@abetkasmart.com">Написати нам</a>
-          </div>
+        <div class="trust-groups">
+          <article class="trust-group">
+            <h3>Safe</h3>
+            <ul>
+              <li>No ads</li>
+              <li>No data collection</li>
+              <li>No login required</li>
+              <li>No hidden purchases</li>
+            </ul>
+          </article>
+          <article class="trust-group">
+            <h3>Calm</h3>
+            <ul>
+              <li>No scores</li>
+              <li>No timers</li>
+              <li>No pressure</li>
+              <li>Original music</li>
+            </ul>
+          </article>
+          <article class="trust-group">
+            <h3>Simple</h3>
+            <ul>
+              <li>No reading required</li>
+              <li>Visual context guides play</li>
+              <li>Works offline</li>
+              <li>One-time purchase</li>
+            </ul>
+          </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer__inner">
-        <p>
-          &copy; 2025 Abetka Smart. Всі права захищено.
-          <span class="dot">•</span>
-          <a href="mailto:info@abetkasmart.com">info@abetkasmart.com</a>
-        </p>
-        <p class="footer-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <span class="dot">•</span>
-          <a href="terms.html">Terms of Use</a>
-        </p>
-        <p class="credits">
-          Фото: Unsplash (дружня ліцензія). Торгові марки належать їхнім
-          власникам.
-        </p>
-      </div>
+    <footer class="footer">
+      <p>Abetka Smart</p>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+      <p>
+        <a href="mailto:support@abetkasmart.com">support@abetkasmart.com</a>
+      </p>
     </footer>
-
-    <script src="js/script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
