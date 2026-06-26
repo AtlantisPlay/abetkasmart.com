@@ -5,9 +5,9 @@ const gameData = {
     status: "Live in stores",
     title: "Princess Birthday Games",
     text:
-      "Help Princess Lily and her rainbow unicorn prepare for a special birthday through animated story chapters and independent learning games for ages 3-5.",
+      "Help Princess Lily and her little rainbow unicorn get ready for a birthday celebration with friends, treats, songs, and independent learning games for ages 3-5.",
     learning:
-      "No reading or voiceover is needed. The game guides children through visual context, original music, and beautiful songs. No scores, no pressure, and no stressful reward loops.",
+      "Children count, match, trace, decorate, and create as part of Lily's birthday story. No reading or voiceover is needed; the scene and characters show what to do.",
     activities: [
       "Count candles, gifts, and balloons from 1 to 5",
       "Trace rainbows, numbers, and shapes with a fingertip",
@@ -27,9 +27,9 @@ const gameData = {
     status: "Live in stores",
     title: "Christmas Games",
     text:
-      "A cozy holiday world inspired by nostalgic Christmas cards, with Santa, a baby reindeer, bear cubs, Christmas trees, stockings, gifts, warm lights, and gentle festive puzzles.",
+      "A cozy Christmas world inspired by nostalgic holiday cards, warm windows, winter lights, Santa, a baby reindeer, bear cubs, trees, stockings, and gifts.",
     learning:
-      "Children decorate trees, sort stockings, match festive objects, trace paths, and play gentle holiday learning games inside a warm winter world.",
+      "Children decorate trees, sort stockings, match festive objects, trace paths, and play gentle learning activities inside a warm winter story.",
     activities: [
       "Decorate Christmas trees and stockings",
       "Match festive objects and gifts",
@@ -42,12 +42,12 @@ const gameData = {
     },
   },
   ocean: {
-    image: "Assets/Images/Ocean/SC012%20Test.png",
+    image: "Assets/Images/Ocean/Ocean%20Site%2001.png",
     alt: "Magical ocean animals in a glowing reef world",
     status: "Coming soon",
     title: "Ocean Animals for Kids",
     text:
-      "A magical ocean world filled with colorful reef creatures, quiet wonder, and gentle discovery. Children observe, notice, and play softly inside a world that belongs to the animals.",
+      "A magical reef world filled with colorful real sea creatures, quiet wonder, and gentle discovery.",
     learning:
       "Children find hidden fish, match ocean pairs, sort babies to their mothers, trace paths, and watch gentle creature reactions. The feeling is simple: this is their home. Let them be.",
     activities: [
@@ -66,7 +66,7 @@ const gameData = {
     text:
       "Across a snowy forest, two little villages live far apart. Penguins make ice cream. Forest animals bake cookies and jam. They send gifts, think about each other, and write letters across the snow.",
     learning:
-      "A kind snowman clears the road between the villages and helps the friends finally meet. Children decorate treats, prepare gifts, write letters, trace snowy paths, and move the story toward friendship.",
+      "A kind snowman clears the road between the villages and helps the friends finally meet. Children prepare treats, decorate gifts, write letters, trace snowy paths, and move the story toward friendship.",
     activities: [
       "Prepare ice cream, cookies, jam, and gifts",
       "Decorate letters and send them across the snow",
@@ -81,9 +81,9 @@ const gameData = {
     status: "Coming soon",
     title: "Monster Numbers",
     text:
-      "A musical number-learning game where funny number monsters sing, play, and help children learn counting, tracing, and number recognition.",
+      "A musical number-learning world where funny number monsters sing, play, dance, and help children meet early numbers.",
     learning:
-      "Children trace numbers, count objects, build dot patterns, tap in sequence, match number props, and meet a new number monster in each number block.",
+      "Children trace numbers, count objects, build dot patterns, tap in sequence, match number props, and meet a new monster in each number block.",
     activities: [
       "Count with musical number monsters",
       "Trace numbers and simple shapes",
