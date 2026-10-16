@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/icon.jpg">
+<title>Christmas Games for Kids 3–5</title>
+<meta name="description" content="Christmas Games for Kids 3–5 by Abetka Smart: 24 games and 22 animated moments, in play order.">
+<style>
+/* Layout: storybook press kit — hero with icon, then the game in play order (game card + the scene that follows), then a screening wall of all scenes; lightbox for frames and films. */
+/* Layout: Apple-style press kit — quiet system type, game art carries the color; hero, play order (game + following scene), screening wall, lightbox. */
+:root{
+  --bg:#f5f5f7; --surface:#ffffff; --ink:#1d1d1f; --muted:#6e6e73; --line:#d2d2d7;
+  --blue:#0a55d0; --red:#e01f20; --veil:rgba(0,0,0,.9);
+  --glass:rgba(255,255,255,.72); --glass-ink:#1d1d1f;
+  --f:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-display:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --r:18px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#000000; --surface:#1c1c1e; --ink:#f5f5f7; --muted:#a1a1a6; --line:#38383a;
+  --blue:#4c9bff; --red:#ff5a52; --glass:rgba(28,28,30,.66); --glass-ink:#f5f5f7; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#000000; --surface:#1c1c1e; --ink:#f5f5f7; --muted:#a1a1a6; --line:#38383a;
+  --blue:#4c9bff; --red:#ff5a52; --glass:rgba(28,28,30,.66); --glass-ink:#f5f5f7; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font:17px/1.47 var(--f);-webkit-font-smoothing:antialiased;letter-spacing:-.01em;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2{font-family:var(--f-display);font-weight:700;letter-spacing:-.025em;text-wrap:balance;margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding-block:56px 40px}
+.hero img.icon{width:132px;height:132px;border-radius:29px;box-shadow:0 12px 32px rgba(0,0,0,.16)}
+.studio{display:inline-block;font:600 17px/1.2 var(--f);color:var(--blue);letter-spacing:-.01em}
+.hero h1{font-size:clamp(36px,5.4vw,64px);line-height:1.04;margin-block:6px 14px}
+.lede{font-size:clamp(19px,2.1vw,22px);line-height:1.4;color:var(--muted);max-width:56ch;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none;font-weight:500;font-size:14px}
+.facts li{padding:7px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+@media (max-width:620px){.hero{grid-template-columns:1fr;gap:18px;padding-block:32px 24px}.hero img.icon{width:96px;height:96px;border-radius:22px}}
+
+/* section heads */
+.sec{padding-block:48px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.sec h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1}
+.sec p{margin:0;color:var(--muted);max-width:60ch}
+
+/* play order */
+.order{list-style:none;margin:0;padding:12px 0 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px 20px}
+.step{display:flex;flex-direction:column;gap:8px;min-width:0}
+.shot{position:relative;display:block;width:100%;padding:0;border:0;background:var(--surface);border-radius:var(--r);overflow:hidden;cursor:zoom-in;aspect-ratio:1920/886}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.shot:hover img{transform:scale(1.035)}
+.num{position:absolute;left:10px;top:10px;min-width:34px;height:34px;display:grid;place-items:center;padding:0 9px;border-radius:999px;font:600 16px/1 var(--f);color:var(--glass-ink);background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(14px);backdrop-filter:saturate(180%) blur(14px);font-variant-numeric:tabular-nums;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.step h3{margin:4px 0 0;font:600 19px/1.25 var(--f);letter-spacing:-.015em}
+.step p{margin:0;color:var(--muted);font-size:15px;line-height:1.4}
+.film{display:flex;gap:12px;align-items:center;width:100%;padding:7px;border:1px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer;text-align:left}
+.film:hover{border-color:var(--blue)}
+.film img{width:92px;aspect-ratio:16/9;object-fit:cover;border-radius:9px;flex:none}
+.film span{min-width:0;font-size:13.5px;line-height:1.35}
+.film b{display:block;font-weight:600;color:var(--blue);font-size:13px}
+.film i{font-style:normal;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* screening wall */
+.wall{list-style:none;margin:0;padding:12px 0 48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.wall button{position:relative;display:block;width:100%;padding:0;border:0;border-radius:var(--r);overflow:hidden;background:var(--surface);cursor:pointer;aspect-ratio:16/9}
+.wall img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.wall button:hover img{transform:scale(1.04)}
+.play{position:absolute;inset:auto auto 10px 10px;display:flex;align-items:center;gap:7px;color:var(--glass-ink);background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(14px);backdrop-filter:saturate(180%) blur(14px);border-radius:999px;padding:6px 12px 6px 9px;font:600 13px var(--f);font-variant-numeric:tabular-nums}
+.play::before{content:"";width:0;height:0;border-left:9px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:4px}
+.wall figcaption{font-size:15px;color:var(--ink);margin-top:8px;font-weight:500;letter-spacing:-.01em}
+.wall figure{margin:0;min-width:0}
+
+.contact{display:flex;flex-direction:column;gap:2px}.contact b{color:var(--ink);font-weight:600}.contact a,.studio{color:var(--blue);text-decoration:none}.contact a:hover,a.studio:hover{text-decoration:underline}
+.about{border-top:1px solid var(--line);padding-block:48px 40px}.about h2{font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin-bottom:14px}.about p{margin:0;max-width:62ch;color:var(--muted);font-size:clamp(17px,1.8vw,19px);line-height:1.5}
+footer{border-top:1px solid var(--line);padding-block:22px 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;margin:0;color:#fff}
+dialog::backdrop{background:rgba(0,0,0,.9);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.lb{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  padding:calc(56px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.stage{position:relative;width:min(100%,calc((100vh - 200px) * 2.167));max-width:1500px}
+.stage img,.stage video{width:100%;display:block;border-radius:12px;background:#000}
+.stage.film{width:min(100%,calc((100vh - 200px) * 1.778));max-width:1280px}
+.cap{display:flex;gap:12px 22px;align-items:baseline;flex-wrap:wrap;justify-content:center;text-align:center;max-width:900px}
+.cap h3{margin:0;font:600 22px/1.2 var(--f);letter-spacing:-.02em}
+.cap p{margin:0;color:#a1a1a6;font-size:15px}
+.tabs{display:flex;gap:6px}
+.tabs button{border:1px solid rgba(255,255,255,.25);background:transparent;border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;color:#fff}
+.tabs button[aria-pressed="true"]{background:#fff;color:#1d1d1f;border-color:#fff}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:22px;cursor:pointer}
+.nav:hover{background:rgba(255,255,255,.28)}
+.prev{left:-56px}.next{right:-56px}
+@media (max-width:1300px){.prev{left:8px}.next{right:8px}}
+.close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:8px 16px;cursor:pointer;font-weight:600}
+.count{font:500 14px var(--f);color:#a1a1a6;font-variant-numeric:tabular-nums}
+.new{position:absolute;right:10px;top:10px;padding:5px 10px;border-radius:999px;background:var(--blue);color:#fff;font:600 13px/1 var(--f);letter-spacing:.01em}
+.film .fimg{position:relative;flex:none;display:block}
+.film .fimg::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:var(--glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.film .fimg::before{content:"";position:absolute;left:50%;top:50%;z-index:1;margin:-5px 0 0 -2px;border-left:8px solid var(--glass-ink);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.film .new{z-index:2;right:4px;top:4px;padding:3px 6px;font-size:10px}
+.seg{display:inline-flex;padding:3px;border-radius:999px;background:var(--line);gap:2px}
+.seg button{border:0;background:transparent;border-radius:999px;padding:7px 16px;font:600 14px var(--f);cursor:pointer;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.14)}
+.new-note{margin:14px 0 0;color:var(--muted);font-size:15px;max-width:62ch}
+.new-note b{color:var(--ink);font-weight:600}
+@media (prefers-reduced-motion:reduce){.shot img,.wall img{transition:none}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <img class="icon" src="img/icon.jpg" alt="App icon: Santa and a little reindeer with a bell">
+    <div>
+      <a class="studio" href="https://abetkasmart.com">Abetka Smart</a>
+      <h1>Christmas Games for Kids 3–5</h1>
+      <p class="lede">24 Christmas games for preschoolers. Children decorate the tree, match stockings, count cookie numbers and build puzzles, and after most games they enjoy a joyful animated moment with cute animals and Santa.</p>
+      <ul class="facts">
+        <li>24 games, 12 new</li><li>22 animated moments</li><li>Ages 3–5</li><li>Made for Kids</li><li>Fully unlocked</li><li>100% offline</li><li>No ads</li>
+      </ul>
+      <p class="new-note"><b>New in this update:</b> 12 new games and 9 new animated moments. The 12 original games and every animated moment keep their whimsical storybook style, now with all-new animation.</p>
+    </div>
+  </header>
+
+  <section aria-labelledby="h-order">
+    <div class="sec"><h2 id="h-order">The whole game, in play order</h2><p>Tap a game to see it start, in play and finished. After most games comes a joyful animated moment, a short Christmas scene with cute animals and Santa. Tap ▶ to watch it with sound.</p><div class="seg" role="group" aria-label="Show games"><button type="button" data-show="all" aria-pressed="true">All 24</button><button type="button" data-show="new" aria-pressed="false">12 new</button></div></div>
+    <ol class="order" id="order"></ol>
+  </section>
+
+  <section aria-labelledby="h-films">
+    <div class="sec"><h2 id="h-films">Animated moments</h2><p>All 22 animated moments, with sound. Each one plays after its game.</p></div>
+    <ul class="wall" id="wall"></ul>
+  </section>
+
+  <section class="about" aria-labelledby="h-about">
+    <h2 id="h-about">Made by parents, for little ones</h2>
+    <p>We are a game development studio with 20 years of experience building complex games for major platforms. As parents, we created Abetka Smart, our own brand of games for young children, starting with the games we wanted for our own kids. Every game and every animated moment in Christmas Games is directed and edited by our art director and creative director, with calm pacing, clear actions and warm characters made for ages 3–5.</p>
+  </section>
+
+  <footer><div class="contact"><b>Abetka Smart</b><span>Natasha Dmitrenko Silberg, creative director</span><span><a href="mailto:natasha@atlantisplay.com">natasha@atlantisplay.com</a> · <a href="https://abetkasmart.com">abetkasmart.com</a></span></div><span>Frames and animated moments from the current build, October 2026</span></footer>
+</div>
+
+<dialog id="lb" aria-label="Viewer">
+  <div class="lb">
+    <button class="close" id="lbClose" type="button">Close</button>
+    <div class="stage" id="stage">
+      <button class="nav prev" id="prev" type="button" aria-label="Previous">‹</button>
+      <div id="media"></div>
+      <button class="nav next" id="next" type="button" aria-label="Next">›</button>
+    </div>
+    <div class="cap"><span class="count" id="count"></span><h3 id="capT"></h3><p id="capP"></p></div>
+    <div class="tabs" id="tabs"></div>
+  </div>
+</dialog>
+
+<script>
+const G=[
+ ["Decorate the Christmas Tree","Hang 13 ornaments on the glowing spots while a polar bear cub watches. The star goes on last.","MG_XM01C"],
+ ["Gift Truck Puzzle","Rebuild the red truck full of presents from 4 pieces.","MG_XM08"],
+ ["Stocking Friends Match","Find the twin of each little animal in its stocking.","MG_XM12"],
+ ["Decorate the Door Wreath","Decorate the wreath on the door, ornament by ornament, up to the bell.","MG_XM14"],
+ ["Santa's Sack Puzzle","Put together Santa's sack, overflowing with toys, from 4 pieces.",null],
+ ["Gingerbread House Puzzle","Six pieces make a candy house under the northern lights.","MG_XM03"],
+ ["Cookie Numbers Match: 0–3","Match the gingerbread digits, top row to bottom row.","MG_XM17B"],
+ ["Stamp Shapes Match","Each new stamp has its own shape. Find the envelope with the matching outline. When all six are stamped, the letters fly into the penguin's mailbox.","MG_XM13"],
+ ["Christmas Friends Sticker Match","Find the pairs among the mixed-up stickers on one page. The facing page is a full-page illustration.","MG_XM18B"],
+ ["Sort by Color: Red and Gold Boxes","Sort 12 decorations into the gift box of the same color.","MG_XM09A"],
+ ["Decorate the Gingerbread House","Decorate the gingerbread house with sweets.","MG_XM06"],
+ ["Cookie Numbers Match: 4–7","Match the gingerbread digits 4 to 7.","MG_XM05"],
+ ["Decorate the Little Tree","Catch ornaments from floating bubbles and dress a little tree.","MG_XM11"],
+ ["Toy Sticker Match","Find the pairs among the mixed-up toy stickers. The facing page is a full-page illustration.","MG_XM18A"],
+ ["Hang the Stockings","Hang five stockings on the mantel; the garland lights up.","MG_XM16"],
+ ["Sort by Color: Blue and Gold Sacks","Sort eight toys into the sack of the same color.","MG_XM15B"],
+ ["Cookie Numbers Match: 8–10","Match 8, 9 and 10; Santa and the reindeer pop out.","MG_XM09B"],
+ ["Christmas Tree Puzzle","Put together a fully decorated tree from 4 pieces.",null],
+ ["Christmas Train Puzzle","Six pieces build the steam train and its gift wagon.","MG_XM19"],
+ ["Frosty Window Match","Match pictures in the frost until the window clears and Santa waves.","MG_XM10"],
+ ["Santa's Sleigh Puzzle","Build the sleigh from 4 pieces, then watch it fly off with a sparkle trail.","MG_XM04"],
+ ["Decorate the Northern Lights Tree","Two penguins help decorate a tree under the aurora.","MG_XM02"],
+ ["Present Match","Match the wrapping paper and each pair opens into a toy.","MG_XM07"],
+ ["Christmas Photo Album","Give a heart to each photo of the Christmas moments so far.",null]
+];
+const F={
+ INTRO_XMC:["Santa is coming!","Opening scene"],
+ MG_XM01C:["Bear cubs dance around the tree",""],MG_XM08:["Santa and the snowman drive the gift truck",""],
+ MG_XM12:["Santa climbs out of the chimney",""],MG_XM14:["The snowman lights up the house",""],
+ MG_XM03:["Santa and the reindeer deliver gifts through the village",""],MG_XM17B:["A fox and her kit bake cookies",""],
+ MG_XM13:["Penguins post letters to Santa",""],MG_XM18B:["Santa looks through his album",""],
+ MG_XM09A:["A gift train races through the fairy-tale forest",""],MG_XM06:["A visit to the candy house",""],
+ MG_XM05:["Gifts for Santa",""],MG_XM11:["Santa lays out the presents",""],
+ MG_XM18A:["A little owl looks at Christmas pictures",""],MG_XM16:["Santa fills the stockings",""],
+ MG_XM15B:["Squirrels ski down the hill",""],MG_XM09B:["Santa's train at sunset",""],
+ MG_XM19:["Bunnies decorate a little tree",""],MG_XM10:["Santa stops by",""],
+ MG_XM04:["Santa and two fox kits sled down the hill",""],MG_XM02:["Penguins wave to Santa across the moon",""],
+ MG_XM07:["Santa hugs the little reindeer and gives him a gift",""]
+};
+const DUR={INTRO_XMC:5.2,MG_XM01C:13.5,MG_XM08:8,MG_XM12:8,MG_XM14:7.8,MG_XM03:8,MG_XM17B:13.9,MG_XM13:12.4,MG_XM18B:8,MG_XM09A:8,MG_XM06:8,MG_XM05:8.2,MG_XM11:7.3,MG_XM18A:8,MG_XM16:8.4,MG_XM15B:8,MG_XM09B:8,MG_XM19:8,MG_XM10:12.7,MG_XM04:6.9,MG_XM02:8,MG_XM07:5};
+const FILMS=["INTRO_XMC",...G.map(g=>g[2]).filter(Boolean)];
+const NEW=new Set([2,5,6,8,10,13,16,18,19,21,23,24]);
+const NEWF=new Set([...NEW].map(n=>G[n-1][2]).filter(Boolean));
+const pad=n=>String(n).padStart(2,"0");
+const sec=s=>"0:"+pad(Math.round(s));
+
+// play order
+const ol=document.getElementById("order");
+G.forEach((g,i)=>{
+  const n=i+1, li=document.createElement("li"); li.className="step"; li.dataset.n=n;
+  li.innerHTML=`<button class="shot" type="button" data-g="${i}" aria-label="Open game ${n}: ${g[0]}">
+      <img src="img/g${pad(n)}_t.jpg" alt="" loading="${n<7?"eager":"lazy"}" width="720" height="332"><span class="num">${n}</span>${NEW.has(n)?'<span class="new">New</span>':""}</button>
+    <h3>${g[0]}</h3><p>${g[1]}</p>`+
+    (g[2]?`<button class="film" type="button" data-f="${g[2]}"><span class="fimg"><img src="img/c_${g[2]}.jpg" alt="" loading="lazy">${NEWF.has(g[2])?'<span class="new">New</span>':""}</span><span><b>Animated moment</b>${F[g[2]][0]} <i>${sec(DUR[g[2]])}</i></span></button>`:"");
+  if(i===0){
+    const intro=document.createElement("button"); intro.className="film"; intro.type="button"; intro.dataset.f="INTRO_XMC";
+    intro.innerHTML=`<span class="fimg"><img src="img/c_INTRO_XMC.jpg" alt=""></span><span><b>Animated intro</b>${F.INTRO_XMC[0]} <i>${sec(DUR.INTRO_XMC)}</i></span>`;
+    li.prepend(intro);
+  }
+  ol.appendChild(li);
+});
+// wall
+const wall=document.getElementById("wall");
+FILMS.forEach(k=>{
+  const li=document.createElement("li"); li.dataset.f=k;
+  li.innerHTML=`<figure><button type="button" data-f="${k}" aria-label="Play animated moment: ${F[k][0]}"><img src="img/c_${k}.jpg" alt="" loading="lazy"><span class="play">${sec(DUR[k])}</span>${NEWF.has(k)?'<span class="new">New</span>':""}</button><figcaption>${F[k][0]}</figcaption></figure>`;
+  wall.appendChild(li);
+});
+
+// filter
+document.querySelectorAll("[data-show]").forEach(b=>b.addEventListener("click",()=>{
+  const only=b.dataset.show==="new";
+  document.querySelectorAll("[data-show]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  document.querySelectorAll("#order li").forEach(li=>li.hidden=only&&!NEW.has(+li.dataset.n));
+  document.querySelectorAll("#wall li").forEach(li=>li.hidden=only&&!NEWF.has(li.dataset.f));
+}));
+// lightbox
+const dlg=document.getElementById("lb"), media=document.getElementById("media"), stage=document.getElementById("stage"),
+  capT=document.getElementById("capT"), capP=document.getElementById("capP"), tabs=document.getElementById("tabs"), count=document.getElementById("count");
+const FR=[["start","Start"],["mid","In play"],["done","Finished"]];
+let mode=null, gi=0, fi=2, vi=0;
+function showGame(){
+  mode="g"; stage.classList.remove("film");
+  const g=G[gi];
+  media.innerHTML=`<img src="img/g${pad(gi+1)}_${FR[fi][0]}.jpg" alt="Game ${gi+1}, ${g[0]}: ${FR[fi][1]}">`;
+  count.textContent=`Game ${gi+1} of 24`; capT.textContent=g[0]; capP.textContent=g[1];
+  tabs.innerHTML=FR.map((f,j)=>`<button type="button" data-fr="${j}" aria-pressed="${j===fi}">${f[1]}</button>`).join("");
+}
+function showFilm(){
+  mode="f"; stage.classList.add("film");
+  const k=FILMS[vi];
+  media.innerHTML=`<video src="video/${k}.mp4" poster="img/c_${k}.jpg" controls autoplay playsinline preload="auto"></video>`;
+  count.textContent=`Animated moment ${vi+1} of ${FILMS.length}`; capT.textContent=F[k][0];
+  const after=G.findIndex(g=>g[2]===k); capP.textContent=k==="INTRO_XMC"?"Intro: Santa and the reindeer fly over the Christmas villages":`Plays after game ${after+1}, ${G[after][0]}`;
+  tabs.innerHTML="";
+}
+function open(){ if(!dlg.open) dlg.showModal(); }
+function close(){ media.innerHTML=""; dlg.close(); }
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-g],[data-f],[data-fr]"); if(!b) return;
+  if(b.dataset.fr!==undefined){ fi=+b.dataset.fr; showGame(); return; }
+  if(b.dataset.g!==undefined){ gi=+b.dataset.g; fi=2; showGame(); open(); }
+  else { vi=FILMS.indexOf(b.dataset.f); showFilm(); open(); }
+});
+function step(d){
+  if(mode==="g"){ gi=(gi+d+24)%24; fi=2; showGame(); }
+  else { vi=(vi+d+FILMS.length)%FILMS.length; showFilm(); }
+}
+document.getElementById("prev").onclick=()=>step(-1);
+document.getElementById("next").onclick=()=>step(1);
+document.getElementById("lbClose").onclick=close;
+dlg.addEventListener("cancel",e=>{e.preventDefault();close();});
+dlg.addEventListener("click",e=>{ if(e.target.classList.contains("lb")) close(); });
+document.addEventListener("keydown",e=>{
+  if(!dlg.open) return;
+  if(e.key==="ArrowRight") step(1); else if(e.key==="ArrowLeft") step(-1);
+  else if(mode==="g" && /^[123]$/.test(e.key)){ fi=+e.key-1; showGame(); }
+});
+</script>
+
+</body>
+</html>
