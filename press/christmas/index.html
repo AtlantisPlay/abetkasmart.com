@@ -151,16 +151,16 @@ dialog::backdrop{background:rgba(0,0,0,.9);-webkit-backdrop-filter:blur(20px);ba
     <div>
       <a class="studio" href="https://abetkasmart.com">Abetka Smart</a>
       <h1>Christmas Games for Kids 3–5</h1>
-      <p class="lede">24 Christmas games for preschoolers. Children decorate the tree, match stockings, count cookie numbers and build puzzles, and after most games they enjoy a joyful animated moment with cute animals and Santa.</p>
+      <p class="lede">24 Christmas games for preschoolers. Santa and our favorite animal friends are getting ready for the holidays: children decorate trees, match stockings, count cookies and build puzzles, and after every game comes an animated moment with Christmas music.</p>
       <ul class="facts">
-        <li>24 games, 12 new</li><li>24 animated moments</li><li>Ages 3–5</li><li>Original music</li><li>Made for Kids</li><li>Fully unlocked</li><li>100% offline</li><li>No ads</li>
+        <li>24 games, 12 new</li><li>24 animated moments</li><li>Ages 3-5</li><li>Original music</li><li>Made for Kids</li><li>Settings in 7 languages</li><li>Fully unlocked</li><li>100% offline</li><li>No ads</li>
       </ul>
-      <p class="new-note"><b>New in this update:</b> 12 new games and 11 new animated moments. The 12 original games and every animated moment keep their whimsical storybook style, now with all-new animation.</p>
+      <p class="new-note"><b>New in this update:</b> 12 new games and 12 new animated moments. Games from the first version now have new, more beautiful art, and all the animated moments were recreated in the same storybook style.</p>
     </div>
   </header>
 
   <section aria-labelledby="h-order">
-    <div class="sec"><h2 id="h-order">The whole game, in play order</h2><p>Tap a game to see it start, in play and finished. After most games comes a joyful animated moment, a short Christmas scene with cute animals and Santa. Tap ▶ to watch it with sound.</p></div>
+    <div class="sec"><h2 id="h-order">The whole game, in play order</h2><p>Tap a game to see it start, in play and finished. After every game comes an animated moment with Christmas music, a short scene with Santa and our favorite animal friends. Tap ▶ to watch it with sound.</p></div>
     <ol class="order" id="order"></ol>
   </section>
 
@@ -188,19 +188,19 @@ dialog::backdrop{background:rgba(0,0,0,.9);-webkit-backdrop-filter:blur(20px);ba
 <script>
 const G=[
  ["Decorate the Christmas Tree","Hang 13 ornaments on the glowing spots while a polar bear cub watches. The star goes on last.","MG_XM01C"],
- ["Gift Truck Puzzle","Rebuild the red truck full of presents from 4 pieces.","MG_XM08"],
+ ["Gift Truck Puzzle","Put together the red truck full of presents from 4 pieces.","MG_XM08"],
  ["Stocking Friends Match","Find the twin of each little animal in its stocking.","MG_XM12"],
  ["Decorate the Door Wreath","Decorate the wreath on the door, ornament by ornament, up to the bell.","MG_XM14"],
  ["Santa's Sack Puzzle","Put together Santa's sack, overflowing with toys, from 4 pieces.","MG_XM03"],
  ["Gingerbread House Puzzle","Six pieces make a candy house under the northern lights.","MG_XM22"],
  ["Cookie Numbers Match: 0–3","Match the gingerbread digits, top row to bottom row.","MG_XM17B"],
  ["Stamp Shapes Match","Each new stamp has its own shape. Find the envelope with the matching outline. When all six are stamped, the letters fly into the penguin's mailbox.","MG_XM13"],
- ["Christmas Friends Sticker Match","Find the pairs among the mixed-up stickers on one page. The facing page is a full-page illustration.","MG_XM18B"],
+ ["Christmas Friends Sticker Match","Find the pairs among the Christmas friends in a sticker album.","MG_XM18B"],
  ["Sort by Color: Red and Gold Boxes","Sort 12 decorations into the gift box of the same color.","MG_XM09A"],
  ["Decorate the Gingerbread House","Decorate the gingerbread house with sweets.","MG_XM06"],
  ["Cookie Numbers Match: 4–7","Match the gingerbread digits 4 to 7.","MG_XM05"],
  ["Decorate the Little Tree","Catch ornaments from floating bubbles and dress a little tree.","MG_XM11"],
- ["Toy Sticker Match","Find the pairs among the mixed-up toy stickers. The facing page is a full-page illustration.","MG_XM18A"],
+ ["Toy Sticker Match","Find the pairs among the toys in a sticker album.","MG_XM18A"],
  ["Hang the Stockings","Hang five stockings on the mantel; the garland lights up.","MG_XM16"],
  ["Sort by Color: Blue and Gold Sacks","Sort eight toys into the sack of the same color.","MG_XM15B"],
  ["Cookie Numbers Match: 8–10","Match 8, 9 and 10; Santa and the reindeer pop out.","MG_XM09B"],
@@ -214,7 +214,7 @@ const G=[
 ];
 const F={
  INTRO_XMC:["Santa is on his way, and the Christmas stories begin","Opening scene"],
- MG_XM01C:["When the tree is ready, the celebration can begin",""],MG_XM08:["Every gift is on its way to someone who’s waiting",""],
+ MG_XM01C:["When the tree is ready, Christmas can begin",""],MG_XM08:["Every gift is on its way to someone who’s waiting",""],
  MG_XM12:["A little surprise, left while everyone was sleeping",""],MG_XM14:["Getting home ready, because Christmas is almost here",""],
  MG_XM03:["No one is forgotten on Christmas night",""],MG_XM22:["The most beautiful song of Christmas",""],
  MG_XM23:["Some things are better done together",""],MG_XM17B:["Cookies taste sweeter when you bake them together",""],
@@ -224,14 +224,14 @@ const F={
  MG_XM18A:["Christmas stories are coziest before bed",""],MG_XM16:["By morning, every stocking will be full",""],
  MG_XM15B:["Snowy days are made for fun",""],MG_XM09B:["After a busy day, it’s time to head home",""],
  MG_XM19:["A little tree feels big when friends decorate it",""],MG_XM10:["Santa always finds time to say hello",""],
- MG_XM04:["Christmas is for laughing together",""],MG_XM02:["Goodbye, Santa, until next Christmas",""],
+ MG_XM04:["Christmas is for laughing together",""],MG_XM02:["Waving to Santa under the Christmas moon",""],
  MG_XM07:["Best friends, always together",""],
  OUTRO_XMC:["Santa flies on to bring joy to every home",""]
 };
-const DUR={INTRO_XMC:5.2,OUTRO_XMC:5.2,MG_XM01C:13.5,MG_XM08:8,MG_XM12:8,MG_XM14:7.8,MG_XM03:8,MG_XM22:8,MG_XM23:8,MG_XM17B:13.9,MG_XM13:12.4,MG_XM18B:8,MG_XM09A:8,MG_XM06:8,MG_XM05:8.2,MG_XM11:7.3,MG_XM18A:8,MG_XM16:8.4,MG_XM15B:8,MG_XM09B:8,MG_XM19:8,MG_XM10:12.7,MG_XM04:6.9,MG_XM02:8,MG_XM07:5};
+const DUR={INTRO_XMC:5.2,OUTRO_XMC:10.8,MG_XM01C:13.5,MG_XM08:8,MG_XM12:8,MG_XM14:7.8,MG_XM03:8,MG_XM22:8,MG_XM23:8,MG_XM17B:13.9,MG_XM13:12.4,MG_XM18B:8,MG_XM09A:8,MG_XM06:8,MG_XM05:8.2,MG_XM11:7.3,MG_XM18A:8,MG_XM16:8.4,MG_XM15B:8,MG_XM09B:8,MG_XM19:8,MG_XM10:12.7,MG_XM04:6.9,MG_XM02:8,MG_XM07:5};
 const FILMS=["INTRO_XMC",...G.map(g=>g[2]).filter(Boolean)];
 const NEW=new Set([2,5,6,8,10,13,16,18,19,21,23,24]);
-const NEWF=new Set([...NEW].map(n=>G[n-1][2]).filter(k=>k&&k!=="OUTRO_XMC"));
+const NEWF=new Set([...NEW].map(n=>G[n-1][2]).filter(Boolean));
 const pad=n=>String(n).padStart(2,"0");
 const sec=s=>"0:"+pad(Math.round(s));
 
@@ -250,7 +250,7 @@ const ARR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
 });
 // wall
 const wall=document.getElementById("wall")||document.createElement("ul");
-FILMS.forEach(k=>{ if(k==="OUTRO_XMC") return;
+FILMS.forEach(k=>{
   const li=document.createElement("li"); li.dataset.f=k;
   li.innerHTML=`<figure><button type="button" data-f="${k}" aria-label="Play animated moment: ${F[k][0]}"><img src="img/c_${k}.jpg" alt="" loading="lazy"><span class="play">${sec(DUR[k])}</span>${NEWF.has(k)?'<span class="new">New</span>':""}</button><figcaption>${F[k][0]}</figcaption></figure>`;
   wall.appendChild(li);
