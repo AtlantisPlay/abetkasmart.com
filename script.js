@@ -5,7 +5,7 @@ const gameData = {
     status: "Live in stores",
     title: "Princess Birthday Games",
     text:
-      "Help Princess Lily and her little rainbow unicorn get ready for a birthday celebration with friends, treats, songs, and independent learning games for ages 3-5.",
+      "Princess Lily and her little rainbow unicorn get ready for a birthday celebration with friends, treats, songs, and independent learning games for ages 3-5.",
     learning:
       "Children count, match, trace, decorate, and create as part of Lily's birthday story. No reading or voiceover is needed; the scene and characters show what to do.",
     activities: [
@@ -13,31 +13,33 @@ const gameData = {
       "Trace rainbows, numbers, and shapes with a fingertip",
       "Match colors, shapes, gifts, and sweet treats",
       "Sort, compare, and solve simple puzzles",
-      "Decorate cupcakes, cakes, and party dresses",
+      "Decorate cupcakes, cakes, and a princess dress",
       "Follow Lily's story across 9 animated chapters",
     ],
     links: {
-      appStore: "https://apps.apple.com/il/app/princess-birthday-games-3-5/id6765734577",
+      appStore: "https://apps.apple.com/app/princess-birthday-games-3-5/id6765734577",
       googlePlay: "https://play.google.com/store/apps/details?id=com.abetkasmart.princessgames&pcampaignid=web_share",
     },
   },
   christmas: {
     image: "Assets/Images/Christmass/Christmas%20Puzzle%20Games%20(Ages%203%E2%80%935).png",
+    video: "Assets/Video/christmas-preview-4x3.mp4",
+    poster: "Assets/Video/christmas-preview-4x3-poster.jpg",
     alt: "Christmas learning game world",
     status: "Live in stores",
     title: "Christmas Games",
     text:
-      "A cozy Christmas world inspired by nostalgic holiday cards, warm windows, winter lights, Santa, a baby reindeer, bear cubs, trees, stockings, and gifts.",
+      "A cozy Christmas world of snowy villages, glowing windows and twinkling lights, where Santa, a baby reindeer, bear cubs and penguins get ready for Christmas.",
     learning:
-      "Children decorate trees, sort stockings, match festive objects, trace paths, and play gentle learning activities inside a warm winter story.",
+      "Children decorate trees, match stockings and count gingerbread numbers, and after every game the Christmas story continues in a sweet animated moment.",
     activities: [
-      "Decorate Christmas trees and stockings",
-      "Match festive objects and gifts",
-      "Sort holiday shapes, colors, and treats",
-      "Trace paths through cozy winter scenes",
+      "Decorate Christmas trees and get the house ready for Christmas",
+      "Match stockings, stickers and Christmas friends",
+      "Count and match gingerbread numbers from 0 to 10",
+      "Put together gentle Christmas puzzles",
     ],
     links: {
-      appStore: "https://apps.apple.com/il/app/christmas-games-for-kids-3-5/id6756796485",
+      appStore: "https://apps.apple.com/app/christmas-games-for-kids-3-5/id6756796485",
       googlePlay: "https://play.google.com/store/apps/details?id=com.abetkasmart.christmasgames",
     },
   },
@@ -92,6 +94,23 @@ const gameData = {
     ],
     links: false,
   },
+  halloween: {
+    image: "Assets/Images/Halloween/halloween-farm.jpg",
+    alt: "Farm animals in Halloween costumes in a barn full of glowing pumpkins",
+    status: "Coming soon",
+    title: "Halloween on the Farm",
+    text:
+      "A cozy Halloween farm where a little cow and her friends dress up, carve pumpkins and dance.",
+    learning:
+      "Children decorate the farm for the party, dress the animals in costumes, match glowing pumpkin faces and count pumpkins from 1 to 5, and between the games the Halloween story continues in animated moments with songs.",
+    activities: [
+      "Decorate the farm and dress the animals in costumes",
+      "Match glowing pumpkin faces and Halloween sweets",
+      "Count pumpkins from 1 to 5",
+      "Put together puzzles and trace paths for a little cat and spiders",
+    ],
+    links: false,
+  },
 };
 
 const gameCards = document.querySelectorAll(".game-card[data-game]");
@@ -115,6 +134,25 @@ function setGame(gameKey, options = {}) {
 
   detailImage.src = game.image;
   detailImage.alt = game.alt;
+  const detailMedia = document.querySelector(".game-detail-media");
+  const detailVideo = document.querySelector(".game-detail-video");
+  const detailMediaBg = document.querySelector(".game-detail-media-bg");
+  if (detailMedia && detailVideo) {
+    if (game.video) {
+      if (detailVideo.getAttribute("src") !== game.video) {
+        detailVideo.src = game.video;
+        detailVideo.poster = game.poster || game.image;
+        if (detailMediaBg) detailMediaBg.style.backgroundImage = `url("${game.poster || game.image}")`;
+      }
+      detailMedia.hidden = false;
+      detailImage.hidden = true;
+      detailVideo.play().catch(() => {});
+    } else {
+      detailVideo.pause();
+      detailMedia.hidden = true;
+      detailImage.hidden = false;
+    }
+  }
   detailStatus.textContent = game.status;
   detailTitle.textContent = game.title;
   detailText.textContent = game.text;
@@ -189,4 +227,77 @@ function scrollGames(direction) {
 
 prevButton?.addEventListener("click", () => scrollGames(-1));
 nextButton?.addEventListener("click", () => scrollGames(1));
-setGame("princess");
+setGame("christmas");
+
+// Song previews: one plays at a time.
+(function () {
+  const buttons = document.querySelectorAll(".song-play");
+  if (!buttons.length) return;
+  let current = null;
+  let currentButton = null;
+  const setState = (button, playing) => {
+    button.classList.toggle("is-playing", playing);
+    button.closest(".music-card")?.classList.toggle("is-playing", playing);
+    button.querySelector("span").innerHTML = playing ? "&#10074;&#10074;" : "&#9654;";
+  };
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (currentButton === button && current && !current.paused) {
+        current.pause();
+        setState(button, false);
+        return;
+      }
+      if (current) {
+        current.pause();
+        setState(currentButton, false);
+      }
+      if (currentButton !== button || !current) {
+        current = new Audio(button.dataset.src);
+        current.addEventListener("ended", () => setState(button, false));
+        currentButton = button;
+      }
+      current.play().then(() => setState(button, true)).catch(() => setState(button, false));
+    });
+  });
+})();
+
+// Card video previews: play on hover (desktop) and while the card is selected.
+document.querySelectorAll(".game-card-video").forEach((video) => {
+  const card = video.closest(".game-card");
+  if (!card) return;
+  card.addEventListener("mouseenter", () => video.play().catch(() => {}));
+  card.addEventListener("mouseleave", () => {
+    video.pause();
+  });
+});
+
+// Home proof: video, then two photos, then again.
+(function () {
+  const slides = Array.from(document.querySelectorAll(".proof-clip .proof-slide"));
+  if (slides.length < 2) return;
+  let index = 0;
+  let timer = null;
+  const show = (next) => {
+    slides[index].classList.remove("is-active");
+    index = next;
+    const slide = slides[index];
+    slide.classList.add("is-active");
+    clearTimeout(timer);
+    if (slide.tagName === "VIDEO") {
+      slide.currentTime = 0;
+      slide.play().catch(() => {
+        timer = setTimeout(() => show((index + 1) % slides.length), 4500);
+      });
+    } else {
+      timer = setTimeout(() => show((index + 1) % slides.length), 4500);
+    }
+  };
+  slides.forEach((slide) => {
+    if (slide.tagName === "VIDEO") {
+      slide.addEventListener("ended", () => show((index + 1) % slides.length));
+    }
+  });
+  if (slides[0].tagName !== "VIDEO") {
+    timer = setTimeout(() => show(1), 4500);
+  }
+})();
