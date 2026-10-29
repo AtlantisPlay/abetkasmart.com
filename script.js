@@ -23,8 +23,8 @@ const gameData = {
   },
   christmas: {
     image: "Assets/Images/Christmass/Christmas%20Puzzle%20Games%20(Ages%203%E2%80%935).png",
-    video: "Assets/Video/christmas-moments.mp4",
-    poster: "Assets/Video/christmas-moments-poster.jpg",
+    video: "Assets/Video/christmas-moments-v2.mp4",
+    poster: "Assets/Video/christmas-moments-v2-poster.jpg",
     alt: "Christmas learning game world",
     status: "Live in stores",
     title: "Christmas Games",
