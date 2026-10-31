@@ -327,3 +327,4 @@ document.querySelectorAll(".game-card-video").forEach((video) => {
     update();
   });
 })();
+
