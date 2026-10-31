@@ -1986,3 +1986,116 @@ h1 span {
   background: rgba(224, 243, 244, 0.9);
   border-color: rgba(131, 189, 215, 0.32);
 }
+
+/* Mobile polish 31.10: readable text, 44px taps, swipe rows instead of long stacks */
+.swipe-dots {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .games-section {
+    overflow-x: clip;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --muted: #4f5a6c;
+  }
+
+  main p,
+  .learning-tile span {
+    font-weight: 500;
+  }
+
+  .learning-tile span {
+    font-size: 1rem;
+  }
+
+  .principles-list li {
+    font-size: 0.86rem;
+    padding: 8px 11px;
+  }
+
+  .music-card .song-game {
+    font-size: 0.82rem;
+  }
+
+  .music-section,
+  .learning-section {
+    overflow-x: clip;
+  }
+
+  .trust-group li {
+    font-size: 1rem;
+  }
+
+  .game-card-actions a,
+  .store-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .song-play {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .footer-links a,
+  .footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .learning-examples,
+  .music-grid {
+    display: flex;
+    gap: 12px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 4px 16px 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .learning-examples::-webkit-scrollbar,
+  .music-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .learning-tile {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+
+  .music-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .swipe-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 2px 0 6px;
+  }
+
+  .swipe-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(223, 165, 79, 0.35);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .swipe-dots span.is-active {
+    background: var(--gold);
+    transform: scale(1.25);
+  }
+}

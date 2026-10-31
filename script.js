@@ -7,7 +7,7 @@ const gameData = {
     text:
       "Princess Lily and her little rainbow unicorn get ready for a birthday celebration with friends, treats, songs, and independent learning games for ages 3-5.",
     learning:
-      "Children count, match, trace, decorate, and create as part of Lily's birthday story. No reading or voiceover is needed; the scene and characters show what to do.",
+      "Children count, match, trace, decorate, and create as part of Lily's birthday story. There is no voiceover and no text, by design, so every child can play, whatever language they speak. At the start of each game, a little animated finger shows what to do, and it comes back whenever a child pauses.",
     activities: [
       "Count candles, gifts, and balloons from 1 to 5",
       "Trace rainbows, numbers, and shapes with a fingertip",
@@ -300,4 +300,30 @@ document.querySelectorAll(".game-card-video").forEach((video) => {
   if (slides[0].tagName !== "VIDEO") {
     timer = setTimeout(() => show(1), 4500);
   }
+})();
+
+// Mobile swipe rows: dots under activities and songs show where you are.
+(function () {
+  const rows = document.querySelectorAll(".learning-examples, .music-grid");
+  rows.forEach((row) => {
+    const items = Array.from(row.children);
+    if (items.length < 2) return;
+    const dots = document.createElement("div");
+    dots.className = "swipe-dots";
+    dots.setAttribute("aria-hidden", "true");
+    items.forEach(() => dots.appendChild(document.createElement("span")));
+    row.after(dots);
+    const update = () => {
+      const left = row.getBoundingClientRect().left;
+      let best = 0;
+      let bestDist = Infinity;
+      items.forEach((item, i) => {
+        const d = Math.abs(item.getBoundingClientRect().left - left - 16);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      dots.querySelectorAll("span").forEach((dot, i) => dot.classList.toggle("is-active", i === best));
+    };
+    row.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+    update();
+  });
 })();
