@@ -266,7 +266,7 @@ document.querySelectorAll(".game-card-video").forEach((video) => {
   const card = video.closest(".game-card");
   if (!card) return;
   card.addEventListener("mouseenter", () => video.play().catch(() => {}));
-  card.addEventListener("mouseleave", () => {
+  card.addEventListener("mouseleave", () => { video.load();
     video.pause();
   });
 });
