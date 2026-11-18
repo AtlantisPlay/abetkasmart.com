@@ -31,7 +31,7 @@ const gameData = {
     text:
       "A cozy Christmas world of snowy villages, glowing windows and twinkling lights, where Santa, a baby reindeer, bear cubs and penguins get ready for Christmas.",
     learning:
-      "Children decorate trees, match stockings and count gingerbread numbers, and after every game the Christmas story continues in a sweet animated moment.",
+      "All 24 games are gentle and easy to follow, and after each one, a little animated moment plays with Christmas music.",
     activities: [
       "Decorate Christmas trees and get the house ready for Christmas",
       "Match stockings, stickers and Christmas friends",
